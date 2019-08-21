@@ -1,0 +1,10 @@
+<div class="container" [ngStyle]="containerStyleConfig">
+    <div *ngFor="let item of items">
+        <app-container *ngIf="item.isContainer" 
+            [config]="item">
+        </app-container>
+        <app-field *ngIf="!item.isContainer" 
+            [config]="item">
+        </app-field>
+    </div>
+</div>
